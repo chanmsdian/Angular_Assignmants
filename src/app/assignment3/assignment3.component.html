@@ -1,0 +1,9 @@
+<button class="btn btn-success" (click)="onToggleDisplay()"> Display Server Details</button>
+<p *ngIf="showSecret">Secret Password = Chan</p>
+<div *ngFor="let Item of log; let i = index" [ngStyle]="{backgroundColor : i %5 ? 'transparent' : 'blue'}"
+    [ngClass]="{'white-text': i %5==0}">
+    {{Item}}
+</div>
+<div>
+    <button class="btn btn-danger" (click)="reset()">Reset Server</button>
+</div>
